@@ -15,10 +15,17 @@ class Result {
 
     public static void miniMaxSum(List<Integer> arr) {
      
-        int sum = arr.stream().mapToInt(Integer::intValue).sum();
-        int minSum = sum - arr.stream().max(Integer::compareTo).orElse(0);
-        int maxSum = sum - arr.stream().min(Integer::compareTo).orElse(0);
-        System.out.println(minSum + " " + maxSum);
+    int min = arr.get(0);
+    int max = arr.get(0);
+    long totalSum = 0;
+    
+    for (int n : arr){
+        totalSum += n;
+        if (n < min) min = n;
+        if (n > max) max = n;
+    }
+    
+    System.out.print((totalSum - max) + " " + (totalSum - min));
         
 
     }

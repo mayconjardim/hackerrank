@@ -12,13 +12,6 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 
-    /*
-     * Complete the 'timeConversion' function below.
-     *
-     * The function is expected to return a STRING.
-     * The function accepts STRING s as parameter.
-     */
-
     public static String timeConversion(String s) {
 
      String start = s.substring(0,2), end = s.substring(2,8);
